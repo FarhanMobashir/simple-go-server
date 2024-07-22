@@ -1,0 +1,28 @@
+name: Go CI
+
+on: push
+
+jobs:
+  build:
+    runs-on: alpine
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout
+
+      - name: Set up Go
+        uses: actions/setup-go
+        with:
+          go-version: "1.18"
+
+      - name: Install Dependencies
+        run: go mod download
+
+      - name: Run Tests
+        run: go test ./...
+
+      - name: Run shell script
+        run: |
+          echo "Hello World testing pull request"
+          echo "this is the secret - ${{ secrets.token }}"
+          echo "this is the another secret - ${{ secrets.sshKey }}"
