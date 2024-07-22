@@ -12,7 +12,7 @@ import (
 func setupRouter() *gin.Engine {
 	router := gin.Default()
 	router.GET("/", func(c *gin.Context) {
-		c.String(http.StatusOK, "Hello, World!")
+		c.String(http.StatusOK, "Hello")
 	})
 	router.NoRoute(func(c *gin.Context) {
 		c.String(http.StatusNotFound, "404 Not Found")
