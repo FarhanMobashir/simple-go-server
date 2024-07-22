@@ -4,7 +4,7 @@ on: push
 
 jobs:
   build:
-    runs-on: debian
+    runs-on: ubuntu
 
     steps:
       - name: Checkout repository
