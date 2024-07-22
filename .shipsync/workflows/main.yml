@@ -4,7 +4,7 @@ on: push
 
 jobs:
   build:
-    runs-on: ubuntu
+    runs-on: alpine
 
     steps:
       - name: Checkout repository
@@ -19,7 +19,7 @@ jobs:
         run: go mod download
 
       - name: Run Tests
-        run: go test ./...
+        run: go test -v ./...
 
       - name: Run shell script
         run: |
