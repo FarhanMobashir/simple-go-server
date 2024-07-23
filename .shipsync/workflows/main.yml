@@ -15,7 +15,7 @@ jobs:
         with:
           go-version: "1.18"
 
-      - name: Install Dependencies
+      - name: Install Dependencies Now
         run: go mod download
 
       - name: Run Tests
