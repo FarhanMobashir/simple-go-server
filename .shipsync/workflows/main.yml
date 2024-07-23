@@ -4,7 +4,7 @@ on: push
 
 jobs:
   build:
-    runs-on: alpine
+    runs-on: fedora
 
     steps:
       - name: Checkout repository
